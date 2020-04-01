@@ -1,0 +1,2 @@
+[13:36:03:771] [12324:12331] [WARN][com.freerdp.crypto] - Certificate verification failure 'unable to get local issuer certificate (20)' at stack position 0
+[13:36:03:771] [12324:12331] [WARN][com.freerdp.crypto] - CN = hwp-acdsmg-01.smanager.corp.br

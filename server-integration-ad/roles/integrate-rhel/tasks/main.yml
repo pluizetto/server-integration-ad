@@ -2,7 +2,6 @@
 # include vars file
 - name: Include vars of authentication.yml
   include_vars:
-    include_vars:
     dir: group_vars
     extensions:
         - yml
