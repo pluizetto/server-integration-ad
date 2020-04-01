@@ -1,7 +1,6 @@
 ---
 - name: AD Linux Integration
   hosts: all
-  remote_user: ansibleadm
   become: yes
   become_method: sudo
   roles:
