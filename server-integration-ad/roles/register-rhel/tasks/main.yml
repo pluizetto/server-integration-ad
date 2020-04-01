@@ -1,0 +1,18 @@
+---
+- name: register rhel 
+  redhat_subscription:
+    state: present
+    username: paulo.luizetto@smanager.com.br 
+    password: '@123Padrao'
+    pool_ids: 8a85f99c69d235390169ed7add29150a 
+
+- name: Remove repository (and clean up left-over metadata)
+  yum_repository:
+    name: "{{ item }}" 
+    state: present
+    enabled: yes
+  loop:
+    - rhel-7-server-rpms
+    - rhel-7-server-extras-rpms
+...
+

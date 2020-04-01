@@ -1,0 +1,27 @@
+---
+# install or update realm package
+- name: install latest version of realmd
+  yum:
+    name: realmd
+    state: latest
+
+# join server to AD
+- name: Join Server to Active Directory
+  shell: 'echo "{{ password }}" | realm join --user="{{ account }}" --computer-ou=OU=Servers,OU=Machines,OU=SManager,DC=smanager,DC=corp,DC=br smanager.corp.br'
+
+# copy template sssd.conf file to the server
+- name: Configure sssd.conf file
+  template:
+    src: sssd.conf.template
+    dest: /etc/sssd/sssd.conf
+
+# allow members of the groups to access the server
+- name: Permit AD Groups to Login
+  shell: "realm permit -g sm-notsudoers-{{ ansible_hostname }} sm-sudoers-{{ ansible_hostname }}"
+
+# copy template sudoers file to the server
+- name: Configure sudoers file
+  template:
+    src: sudoers.template
+    dest: /etc/sudoers
+...    
