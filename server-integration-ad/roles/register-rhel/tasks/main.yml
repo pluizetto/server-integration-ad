@@ -6,10 +6,9 @@
     password: '@123Padrao'
     pool_ids: 8a85f99c69d235390169ed7add29150a 
 
-- name: Remove repository (and clean up left-over metadata)
+- name: Add repositories
   yum_repository:
     name: "{{ item }}" 
-    state: present
     enabled: yes
   loop:
     - rhel-7-server-rpms
