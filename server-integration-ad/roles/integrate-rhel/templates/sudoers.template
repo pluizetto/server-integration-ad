@@ -106,7 +106,7 @@ Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin
 root	ALL=(ALL) 	ALL
 
 # sudoers group of Active Directory
-%sm-sudoers-"{{ ansible_hostname }}"	ALL=(ALL)	ALL
+%sm-sudoers-%w{{ '{'+ansible_hostname+'}' }}	ALL=(ALL)	ALL
 
 ## Allows members of the 'sys' group to run networking, software, 
 ## service management apps and more.
