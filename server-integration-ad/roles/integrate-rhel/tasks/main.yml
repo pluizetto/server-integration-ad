@@ -2,7 +2,10 @@
 # include vars file
 - name: Include vars of authentication.yml
   include_vars:
-    file: authentication.yml
+    include_vars:
+    dir: group_vars
+    extensions:
+        - yml
 
 # install or update realm package
 - name: install latest version of realmd
