@@ -7,7 +7,7 @@
     pool_ids: 8a85f99c69d235390169ed7add29150a 
 
 - name: Add repositories
-  yum_repository:
+  rhsm_repository:
     name: "{{ item }}" 
     enabled: yes
   loop:
