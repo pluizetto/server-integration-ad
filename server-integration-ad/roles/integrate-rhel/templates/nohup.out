@@ -1,2 +1,10 @@
 [13:36:03:771] [12324:12331] [WARN][com.freerdp.crypto] - Certificate verification failure 'unable to get local issuer certificate (20)' at stack position 0
 [13:36:03:771] [12324:12331] [WARN][com.freerdp.crypto] - CN = hwp-acdsmg-01.smanager.corp.br
+[13:36:03:513] [12324:12331] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpdr
+[13:36:03:513] [12324:12331] [INFO][com.freerdp.client.common.cmdline] - loading channelEx rdpsnd
+[13:36:03:513] [12324:12331] [INFO][com.freerdp.client.common.cmdline] - loading channelEx cliprdr
+[13:36:04:687] [12324:12331] [INFO][com.freerdp.gdi] - Local framebuffer format  PIXEL_FORMAT_BGRX32
+[13:36:04:687] [12324:12331] [INFO][com.freerdp.gdi] - Remote framebuffer format PIXEL_FORMAT_RGB16
+[13:36:04:717] [12324:12331] [INFO][com.winpr.clipboard] - initialized POSIX local file subsystem
+[13:36:04:719] [12324:12337] [INFO][com.freerdp.channels.rdpsnd.client] - Loaded fake backend for rdpsnd
+[18:35:08:393] [12324:12331] [INFO][com.freerdp.core] - ERRINFO_LOGOFF_BY_USER (0x0000000C):The disconnection was initiated by the user logging off their session on the server.
